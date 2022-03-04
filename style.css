@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&family=Smooch+Sans&display=swap');
+
+:root {
+  --side-board-color: #7E22CE;
+  --main-color: #FAF5FF;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.layout-container {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 4.5fr;
+}
+
+.header-container {
+  grid-column: 2;
+  background-color: var(--main-color);
+  padding-left: 40px;
+  box-shadow: 0 10px 10px -6px #b4b4bb;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
+
+.sidebar-container {
+  grid-row: 1 / -1;
+  background-color: var(--side-board-color);
+  color: var(--main-color);
+  padding-left: 30px;
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px auto auto 1fr;
+  gap: 30px;
+}
+
+.logo-container {
+  color: var(--main-color);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#logo-symbol {
+  font-size: 48px;
+}
+
+.symbol {
+  font-size: 28px;
+  padding-left: 5px;
+  padding-right: 20px;
+}
+
+.navbar,
+.support {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li,
+.support li {
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+.projects-container {
+  padding-left: 20px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.projects-container h1 {
+  margin: 0;
+  font-size: 18px;
+  padding: 20px 0px 10px 0px;
+}
+
+.projects {
+  grid-row: 1 / -1;
+}
+
+.projects-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  gap: 20px;
+}
+
+#search-bar {
+  width: 400px;
+  border: none;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+.notification {
+  justify-self: flex-end;
+  padding-right: 80px;
+
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 30px;
+}
+
+.notification button,
+.hello-user button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.notification .symbol {
+  padding: 0;
+}
+
+.notification button:hover,
+.hello-user button:hover {
+  background-color: inherit;
+}
+
+#user-img {
+  height: 48px;
+  width: 48px;
+}
+
+.hello-user {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 50px 50px;
+  position: relative;
+  bottom: 10px;
+}
+
+.hello-user p {
+  margin: 0;
+  padding: 0;
+}
+
+.hello-user #hello-img {
+  grid-row: 1 / 3;
+  height: 72px;
+  width: 72px;
+  align-self: center;
+}
+
+#hello-name {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: flex-start;
+}
+
+#say-hi {
+  font-size: 16px;
+  padding-top: 25px;
+}
+
+#hello-name {
+  font-size: 28px;
+}
+
+.functionality {
+  height: 100%;
+  padding-right: 60px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-self: center;
+  justify-self: flex-end;
+  gap: 40px;
+}
+
+.functionality button {
+  background-color: var(--side-board-color);
+  color: var(--main-color); 
+  border: none;
+  height: 50px;
+  width: 120px;
+  border-radius: 40px;
+  align-self: center;
+
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
