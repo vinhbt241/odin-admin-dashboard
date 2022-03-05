@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&family=Smooch+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
 
 :root {
-  --side-board-color: #7E22CE;
-  --main-color: #FAF5FF;
+  --side-board-color: #7e22ce;
+  --main-color: #faf5ff;
+  --project-bg-color: #ddd6fe;
+  --shadow-color: #b4b4bb;
+  --project-font-color: #666666;
 }
 
 body {
@@ -19,6 +22,15 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.symbol {
+  font-size: 28px;
+}
+
 .layout-container {
   width: 100vw;
   height: 100vh;
@@ -32,7 +44,7 @@ a {
   grid-column: 2;
   background-color: var(--main-color);
   padding-left: 40px;
-  box-shadow: 0 10px 10px -6px #b4b4bb;
+  box-shadow: 0 10px 10px -6px var(--shadow-color);
   z-index: 2;
 
   display: grid;
@@ -66,9 +78,8 @@ a {
   font-size: 48px;
 }
 
-.symbol {
-  font-size: 28px;
-  padding-left: 5px;
+.sidebar-symbol {
+  padding-left: 10px;
   padding-right: 20px;
 }
 
@@ -83,31 +94,6 @@ a {
 .support li {
   padding: 10px 0;
   font-weight: bold;
-}
-
-.projects-container {
-  padding-left: 20px;
-
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-
-.projects-container h1 {
-  margin: 0;
-  font-size: 18px;
-  padding: 20px 0px 10px 0px;
-}
-
-.projects {
-  grid-row: 1 / -1;
-}
-
-.projects-display {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(auto-fit, 1fr);
-  gap: 20px;
 }
 
 #search-bar {
@@ -144,9 +130,10 @@ a {
   background-color: inherit;
 }
 
-#user-img {
+.user-img {
   height: 48px;
   width: 48px;
+  border-radius: 50%;
 }
 
 .hello-user {
@@ -201,10 +188,151 @@ a {
   border: none;
   height: 50px;
   width: 120px;
-  border-radius: 40px;
+  border-radius: 30px;
   align-self: center;
 
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
 }
 
+.projects-container {
+  padding-left: 20px;
+  background-color: var(--project-bg-color);
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.project-outheader {
+  margin: 0;
+  font-size: 20px;
+  padding: 20px 0px 10px 0px;
+}
+
+.projects {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
+
+.projects-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  gap: 30px;
+
+}
+
+.projects-display .project-container {
+  background-color: var(--main-color);
+  border-radius: 15px;
+  box-shadow: 2px 4px 4px 2px var(--shadow-color);
+  padding-right: 30px;
+
+  display: grid;
+  grid-template-columns: 8px 1fr;
+  grid-template-rows: 1fr 48px;
+  column-gap: 20px;
+}
+
+.project-side-color {
+  grid-column: 1;
+  grid-row: 1 / -1;
+  height: 100%;
+  background-color: orange;
+  border-radius: 15px 0 0 15px;
+}
+
+.project {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 16px;
+}
+
+.project-name {
+  font-size: 18px;
+  padding-top: 30px;
+  margin: 0;
+}
+
+.project-describe {
+  font-weight: 300;
+  color: var(--project-font-color);
+}
+
+.annoucement {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.project-interactive { 
+  justify-content: flex-end;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 28px);
+  gap: 20px;
+}
+
+.news-wrapper{
+  background-color: var(--main-color);
+  font-size: 16px;  
+  margin: 0 35px;
+  padding: 30px 30px 0 30px;
+  border-radius: 15px;
+  box-shadow: 2px 4px 4px 2px var(--shadow-color);
+}
+
+.news {
+  padding-bottom: 30px;
+}
+
+.news-header {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.news-article {
+  font-size: 14px;
+  color: var(--project-font-color)
+}
+
+.annoucement .project-outheader,
+.trending .project-outheader {
+  padding-left: 35px;
+}
+
+.trends-container {
+  background-color: var(--main-color);
+  margin: 0  35px;
+  padding: 30px 30px 10px 30px;
+  border-radius: 15px;
+  box-shadow: 2px 4px 4px 2px var(--shadow-color);
+}
+
+.trend {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  grid-template-rows: 24px 24px;
+  column-gap: 20px;
+  margin-bottom: 20px;
+}
+
+.trending-user {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
+
+.trending-username {
+  display: inline;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.trending-describe {
+  color: var(--project-font-color);
+  font-weight: 300;
+}
+
+  
