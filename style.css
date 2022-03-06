@@ -98,9 +98,12 @@ p {
 
 #search-bar {
   width: 400px;
-  border: none;
-  border-radius: 10px;
-  padding-left: 10px;
+  height: 25px;
+  border: 2px solid var(--side-board-color);
+  border-radius: 15px;
+  padding: 0 12px;
+  overflow: hidden;
+  font-size: 18px;
 }
 
 .notification {
@@ -112,8 +115,8 @@ p {
   gap: 30px;
 }
 
-.notification button,
-.hello-user button {
+.notification button {
+  background-color: var(--main-color);
   border: none;
   padding: 0;
   margin: 0;
