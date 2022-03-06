@@ -99,11 +99,16 @@ p {
 #search-bar {
   width: 400px;
   height: 25px;
-  border: 2px solid var(--side-board-color);
+  border: none;
   border-radius: 15px;
   padding: 0 12px;
   overflow: hidden;
   font-size: 18px;
+}
+
+#search-bar:focus {
+  border: 2px solid var(--side-board-color);
+  outline: none;
 }
 
 .notification {
